@@ -60,16 +60,16 @@
 
 // ###### CONTROL VIA RC REMOTE ######
 // left sensor board cable. Channel 1: steering, Channel 2: speed. Use a very short cable!
-//#define CONTROL_PPM                 // use PPM-Sum as input. disable CONTROL_SERIAL_USART2!
-//#define PPM_NUM_CHANNELS 6          // total number of PPM channels to receive, even if they are not used.
+#define CONTROL_PPM                 // use PPM-Sum as input. disable CONTROL_SERIAL_USART2!
+#define PPM_NUM_CHANNELS 10          // total number of PPM channels to receive, even if they are not used.
 
 // ###### CONTROL VIA TWO POTENTIOMETERS ######
 // ADC-calibration to cover the full poti-range: connect potis to left sensor board cable (0 to 3.3V) (do NOT use the red 15V wire in the cable!). see <How to calibrate>. turn the potis to minimum position, write value 1 to ADC1_MIN and value 2 to ADC2_MIN. turn to maximum position and repeat it for ADC?_MAX. make, flash and test it.
 //#define CONTROL_ADC                 // use ADC as input. disable CONTROL_SERIAL_USART2!
-#define ADC1_MIN 0                // min ADC1-value while poti at minimum-position (0 - 4095)
-#define ADC1_MAX 4095               // max ADC1-value while poti at maximum-position (0 - 4095)
-#define ADC2_MIN 0                // min ADC2-value while poti at minimum-position (0 - 4095)
-#define ADC2_MAX 4095               // max ADC2-value while poti at maximum-position (0 - 4095)
+//#define ADC1_MIN 0                // min ADC1-value while poti at minimum-position (0 - 4095)
+//#define ADC1_MAX 4095               // max ADC1-value while poti at maximum-position (0 - 4095)
+//#define ADC2_MIN 0                // min ADC2-value while poti at minimum-position (0 - 4095)
+//#define ADC2_MAX 4095               // max ADC2-value while poti at maximum-position (0 - 4095)
 
 // ###### CONTROL VIA NINTENDO NUNCHUCK ######
 // left sensor board cable. keep cable short, use shielded cable, use ferrits, stabalize voltage in nunchuck, use the right one of the 2 types of nunchucks, add i2c pullups. use original nunchuck. most clones does not work very well.
@@ -91,7 +91,7 @@
 // - weakr and weakl: field weakening for extra boost at high speed (speedR > 700 and speedL > 700). 0 to ~400
 
 #define FILTER              0.1  // lower value == softer filter. do not use values <0.01, you will get float precision issues.
-#define SPEED_COEFFICIENT   0.5  // higher value == stronger. 0.0 to ~2.0?
+#define SPEED_COEFFICIENT   0.6  // higher value == stronger. 0.0 to ~2.0?
 #define STEER_COEFFICIENT   0.5  // higher value == stronger. if you do not want any steering, set it to 0.0; 0.0 to 1.0
 #define INVERT_R_DIRECTION
 #define INVERT_L_DIRECTION
